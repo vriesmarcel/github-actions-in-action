@@ -17,7 +17,7 @@ jobs:
         touch ${{github.workspace}}/${{env.deploymentFile}}
         
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: deployfile
         path: ${{github.workspace}}/${{env.deploymentFile}}
