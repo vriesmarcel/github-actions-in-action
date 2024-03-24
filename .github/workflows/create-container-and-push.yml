@@ -73,7 +73,7 @@ jobs:
       # we use this action to determine the labels for the image
       - name: Docker meta
         id: meta
-        uses: docker/metadata-action@v4
+        uses: docker/metadata-action@v5
         with:
           images: actions-with-actions/globoticket 
       # build and push the image to the container registry
