@@ -10,14 +10,14 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: create a file we use in next job
       run: |
         touch ${{github.workspace}}/${{env.deploymentFile}}
         
     - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: deployfile
         path: ${{github.workspace}}/${{env.deploymentFile}}
@@ -27,7 +27,7 @@ jobs:
     needs: build
     steps:
     - name: Download artifact from build job
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: deployfile
     - name: show files downloaded
