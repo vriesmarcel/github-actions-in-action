@@ -33,7 +33,7 @@ jobs:
       run: dotnet add unittests/unittests.csproj  package LiquidTestReports.Markdown
       
     - name: Test
-      run: dotnet test --logger "liquid.md;logfilename=testResults.md" 
+      run: dotnet test unittests/unittests.csproj --logger "liquid.md;logfilename=testResults.md" 
     - name: Output the results to the actions jobsummary
       if: always()
       run: cat $(find . -name testResults.md) >> $GITHUB_STEP_SUMMARY
