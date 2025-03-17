@@ -34,7 +34,7 @@ jobs:
           creds: ${{ secrets.azurecredentials }}
         
       - name: Move 10% trafic to staging
-        uses: Azure/cli@v1.0.7
+        uses: Azure/cli@v2.1.0
         with:
           inlinescript: 'az webapp traffic-routing set --distribution ${{inputs.slotname}}=$${{inputs.percentage}}  --name ${{inputs.appname}} --resource-group ${{inputs.resourcegroup}}'
       - name: validate the deployment is still healthy for 10 seconds
