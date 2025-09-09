@@ -36,7 +36,7 @@ jobs:
           target: './'
 
       - name: set kubernetes context
-        uses: azure/k8s-set-context@v3
+        uses: azure/k8s-set-context@v4
         id: setcontext
         with:
           method: kubeconfig
@@ -81,7 +81,7 @@ jobs:
           target: './'
 
       - name: set kubernetes context
-        uses: azure/k8s-set-context@v3
+        uses: azure/k8s-set-context@v4
         id: setcontext
         with:
           method: kubeconfig
