@@ -37,21 +37,21 @@ jobs:
       # patch the deployment files with the correct versions.
       # we do this for catalog, frontend and ordering
       - name: Replace tokens
-        uses: cschleiden/replace-tokens@v1.0
+        uses: cschleiden/replace-tokens@v1.3
         with:
           files: '["${{github.workspace}}/${{env.deploymentfileFolder}}/catalog.yaml"]'
         env: 
           Build.version: ${{env.CATALOG_VERSION}}
 
       - name: Replace tokens
-        uses: cschleiden/replace-tokens@v1.0
+        uses: cschleiden/replace-tokens@v1.3
         with:
           files: '["${{github.workspace}}/${{env.deploymentfileFolder}}/frontend.yaml"]'
         env: 
           Build.version: ${{env.FRONTED_VERSION}}
 
       - name: Replace tokens
-        uses: cschleiden/replace-tokens@v1.0
+        uses: cschleiden/replace-tokens@v1.3
         with:
           files: '["${{github.workspace}}/${{env.deploymentfileFolder}}/ordering.yaml"]'
         env: 
