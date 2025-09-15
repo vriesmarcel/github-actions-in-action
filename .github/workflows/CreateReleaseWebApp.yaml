@@ -62,7 +62,7 @@ jobs:
             
 
       - name: create a relase with version provided by package push
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           token: "${{ secrets.EXTENDED_ACCESSTOKEN }}"
           tag_name: "v${{env.GitVersion_SemVer}}"
