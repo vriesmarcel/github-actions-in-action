@@ -33,7 +33,7 @@ jobs:
           creds: ${{ secrets.AZURE_DEPLOY }}
         
       - name: Create Deployment Slot Staging
-        uses: Azure/cli@v2.1.0
+        uses: Azure/cli@v3.0.0
         with:
           inlineScript: |
             az webapp deployment slot create --name ${{env.appname}} --resource-group ${{env.resourcegroup}} --slot ${{env.slotname}}
