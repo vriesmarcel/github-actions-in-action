@@ -59,7 +59,7 @@ jobs:
       name: 'staging'
     steps:
       - uses: actions/checkout@v5
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v7
       - name: print env
         run: echo $homepage
         env: 
